@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas Personalizado | SeviAI</title>
+    <meta name="description" content="Automatiza tus reservas sin pagar comisiones abusivas. Sistema llave en mano con Stripe, Bizum y Google Calendar.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-brain">🧠</span>
+                <span class="logo-text">SeviAI</span>
+            </div>
+            <nav class="nav">
+                <a href="#problema">El Problema</a>
+                <a href="#solucion">La Solución</a>
+                <a href="#negocios">Para quién es</a>
+                <a href="#cta" class="btn btn-outline">Agendar llamada</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="#problema">El Problema</a>
+            <a href="#solucion">La Solución</a>
+            <a href="#negocios">Para quién es</a>
+            <a href="#cta" class="btn btn-outline">Agendar llamada</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Tu propio Sistema de Reservas <span class="highlight">Personalizado</span></h1>
+            <p class="hero-subtitle">Cero comisiones a terceros. 100% automático. El ecosistema "Llave en Mano" que conecta disponibilidad, pagos por Bizum y Tarjeta, y atención 24/7 en tu propia web.</p>
+            <div class="hero-ctas">
+                <a href="#cta" class="btn btn-primary">Agendar tu llamada gratuita</a>
+                <a href="#solucion" class="btn btn-secondary">Ver cómo funciona</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problema -->
+    <section id="problema" class="problema">
+        <div class="container">
+            <h2 class="section-title">¿Cuánto dinero estás perdiendo por depender de otros?</h2>
+            <div class="problema-grid">
+                <div class="card card-dark">
+                    <div class="card-icon">💸</div>
+                    <h3>Comisiones Abusivas</h3>
+                    <p>Booking, Airbnb y otras plataformas se llevan entre el 15% y el 20% de tu facturación. Estás pagando un "impuesto" enorme solo por recibir reservas.</p>
+                </div>
+                <div class="card card-dark">
+                    <div class="card-icon">🤯</div>
+                    <h3>Caos por WhatsApp</h3>
+                    <p>Mensajes a deshoras preguntando precios, cruces de calendario, y horas perdidas enviando números de cuenta para transferencias manuales.</p>
+                </div>
+                <div class="card card-dark">
+                    <div class="card-icon">❌</div>
+                    <h3>Clientes que se escapan</h3>
+                    <p>Si no contestas al instante, el cliente reserva en otro sitio. El proceso manual mata la compra impulsiva de quienes quieren reservar ya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para quién es -->
+    <section id="negocios" class="negocios light-bg">
+        <div class="container">
+            <h2 class="section-title text-dark">Adaptable a cualquier modelo de alojamiento</h2>
+            <p class="section-subtitle text-dark">Si vendes tiempo y espacio, este sistema encaja perfectamente con tus reglas de negocio.</p>
+            
+            <div class="tags-grid">
+                <div class="tag-item">🏕️ Campings y Glampings</div>
+                <div class="tag-item">🫧 Hoteles Burbuja</div>
+                <div class="tag-item">🏡 Cabañas y Casas Rurales</div>
+                <div class="tag-item">🔑 Apartamentos Turísticos</div>
+                <div class="tag-item">🥂 Estancias para Parejas</div>
+                <div class="tag-item">📦 Contenedores Reformados</div>
+                <div class="tag-item">⏳ Alquiler por Tramos Horarios</div>
+                <div class="tag-item">🛎️ Hoteles Boutique</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solución -->
+    <section id="solucion" class="solucion">
+        <div class="container">
+            <div class="solucion-header">
+                <h2 class="section-title">El Ecosistema SeviAI: Tu Hub de Reservas</h2>
+                <p class="section-subtitle">No es solo un calendario. Es un recepcionista virtual inteligente que guía al cliente hasta el pago.</p>
+            </div>
+            
+            <div class="features-list">
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <h3>Pagos integrados y seguros sin fricción</h3>
+                        <p>Olvídate de revisar comprobantes de transferencias. Cobra al instante mediante <strong>Stripe, incluyendo Bizum, Apple Pay y Google Pay</strong>. El dinero va directo a tu cuenta bancaria de forma segura y automática.</p>
+                    </div>
+                    <div class="feature-image-placeholder">💳 Stripe + Bizum</div>
+                </div>
+                
+                <div class="feature-row reverse">
+                    <div class="feature-text">
+                        <h3>Sincronización total con Google Calendar</h3>
+                        <p>Tu calendario es el jefe. Si hay hueco en Google Calendar, se puede reservar. En cuanto pagan, se bloquea la fecha. Cero overbooking. Reglas flexibles: desde noches completas hasta complejos tramos horarios.</p>
+                    </div>
+                    <div class="feature-image-placeholder">📅 Calendar Sync</div>
+                </div>
+
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <h3>Chatbot Web y Firma de Contratos</h3>
+                        <p>Un asistente inteligente integrado en la web que resuelve dudas 24/7 y dirige a la compra. Además, puedes hacer que el cliente firme su propio <strong>contrato de alquiler/normas</strong> dentro del mismo proceso de reserva.</p>
+                    </div>
+                    <div class="feature-image-placeholder">🤖 IA + 📝 Contratos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flujo -->
+    <section class="flujo light-bg">
+        <div class="container">
+            <h2 class="section-title text-dark">¿Cómo funciona la experiencia del cliente?</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <h4>Consulta visual</h4>
+                    <p>El cliente entra a tu Hub, ve fotos y consulta disponibilidad en tiempo real sin tener que escribirte.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <h4>Elección y Datos</h4>
+                    <p>Selecciona fecha, acepta las normas (o firma contrato) y rellena sus datos personales de forma guiada.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <h4>Pago Express</h4>
+                    <p>Paga cómodamente con Bizum o Tarjeta. Sin salir de la página y con la máxima seguridad.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <h4>Reserva Confirmada</h4>
+                    <p>Tu Google Calendar se actualiza solo y tú recibes el dinero. Magia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">¿Necesito tener mi propia web previa?</button>
+                    <div class="accordion-content">
+                        <p>No. Te entregamos un "Hub" completo (una página web de reservas) con tu identidad visual, logotipos y dominio propio.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">¿Cómo funciona el pago del servicio?</button>
+                    <div class="accordion-content">
+                        <p>Es una solución llave en mano. Consiste en un pago de <strong>Setup único</strong> por la creación e integración de tu sistema a medida, más un pequeño <strong>Mantenimiento</strong> para servidores y soporte continuo. Sin sorpresas.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">¿Qué métodos de pago acepta Stripe?</button>
+                    <div class="accordion-content">
+                        <p>Tu cliente final podrá pagarte con Tarjeta de crédito/débito, Bizum, Apple Pay y Google Pay. La comisión de Stripe es transparente y diminuta comparada con lo que te cobra una plataforma externa.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">¿Funciona desde el móvil?</button>
+                    <div class="accordion-content">
+                        <p>Por supuesto. El 90% de las reservas se hacen desde un smartphone. Todo el ecosistema está diseñado <i>Mobile First</i> para que el proceso de pago con Bizum/Tarjeta a un clic sea perfecto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="cta" class="cta-final light-bg">
+        <div class="container text-center">
+            <h2 class="text-dark">Acompañamos a las PYMES en su transformación digital</h2>
+            <p class="text-dark">Tu transformación digital empieza aquí: recupera el control de tus reservas y deja de regalar tu margen comercial.</p>
+            <a href="mailto:contacto@seviai.com" class="btn btn-primary btn-large">Agenda tu llamada gratuita</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <span class="logo-brain">🧠</span>
+                    <span class="logo-text">SeviAI</span>
+                </div>
+                <p>&copy; 2026 SeviAI - Asesoría y Formación. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

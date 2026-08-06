@@ -627,6 +627,141 @@ section {
     font-size: 1.25rem;
 }
 
+/* Pricing Section */
+.pricing {
+    background-color: var(--white);
+}
+
+.pricing-card {
+    max-width: 800px;
+    margin: 40px auto 0;
+    background: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 50px;
+    position: relative;
+    box-shadow: var(--shadow-md);
+}
+
+@keyframes pulse-badge {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.05); }
+    100% { transform: translateX(-50%) scale(1); }
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(211, 21, 54, 0.3);
+    white-space: nowrap;
+    animation: pulse-badge 2s infinite ease-in-out;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+}
+
+.pricing-header h3 {
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 15px;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.old-price {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+.current-price {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.iva {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.limit {
+    color: #e67e22;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.pricing-features ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.pricing-features svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.pricing-maintenance {
+    background: var(--light-bg);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.pricing-maintenance h4 {
+    color: var(--text-main);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.pricing-maintenance p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.pricing-cta {
+    text-align: center;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+}
+
 /* Footer */
 .footer {
     background-color: var(--white);

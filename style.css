@@ -630,6 +630,7 @@ section {
 /* Pricing Section */
 .pricing {
     background-color: var(--white);
+    padding-top: 20px;
 }
 
 .pricing-card {

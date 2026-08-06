@@ -52,6 +52,7 @@ h1, h2, h3, h4 {
 .text-dark { color: var(--text-main) !important; }
 .text-white { color: var(--white) !important; }
 .highlight { color: var(--primary-color); }
+.text-left { text-align: left !important; }
 
 .section-title {
     font-size: 2.5rem;
@@ -235,7 +236,46 @@ section {
     background-color: var(--light-bg);
 }
 
-/* El Problema (Clean Cards) */
+/* Demo Video Section */
+.demo {
+    background-color: var(--light-bg);
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    background-color: #ddd; /* Gris claro de fondo si el video no carga */
+    border: 1px solid var(--border-color);
+}
+
+.loom-placeholder-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.9);
+    z-index: -1; /* Queda detrás del iframe si este carga */
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Si el iframe falla o está vacío, hacemos visible el overlay */
+.video-container iframe:not([src*="loom.com"]) + .loom-placeholder-overlay {
+    z-index: 10;
+}
+
+/* El Problema */
 .problema {
     background-color: var(--white);
 }
@@ -281,7 +321,7 @@ section {
     color: var(--text-muted);
 }
 
-/* Tipos de Negocio (Static Pills) */
+/* Tipos de Negocio */
 .tags-grid {
     display: flex;
     flex-wrap: wrap;
@@ -345,7 +385,6 @@ section {
     overflow: hidden;
 }
 
-/* Simula que ahí va una imagen */
 .feature-image-placeholder::before {
     content: '';
     position: absolute;
@@ -364,7 +403,59 @@ section {
     border: 1px solid var(--border-color);
 }
 
+/* Personalización (NUEVA SECCIÓN) */
+.personalizacion {
+    /* La clase .light-bg ya se encarga del fondo en HTML */
+}
+
+.personalizacion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.personalizacion-text h2 {
+    margin-bottom: 1rem;
+}
+
+.pers-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.pers-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    color: var(--primary-color);
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pers-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.pers-item p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
 /* Flujo (Timeline) */
+.flujo {
+    background-color: var(--white);
+}
+
 .timeline {
     max-width: 700px;
     margin: 50px auto 0;
@@ -417,7 +508,7 @@ section {
 
 /* FAQ Accordion */
 .faq {
-    background-color: var(--white);
+    /* La clase .light-bg ya se encarga del fondo en HTML */
 }
 
 .accordion {
@@ -488,7 +579,6 @@ section {
     width: 100%;
     height: 100%;
     background-color: var(--primary-color);
-    /* Patrón sutil estilo red neuronal como el de SeviAI */
     background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
                       radial-gradient(circle at 80% 90%, rgba(255,255,255,0.1) 0%, transparent 50%);
     z-index: -1;
@@ -531,14 +621,24 @@ section {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .feature-row, .feature-row.reverse {
+    .feature-row, .feature-row.reverse, .personalizacion-grid {
         flex-direction: column;
         text-align: center;
-        gap: 30px;
+        gap: 40px;
     }
     
     .feature-image-placeholder {
         width: 100%;
+    }
+    
+    .personalizacion-text h2, .personalizacion-text p {
+        text-align: center !important;
+    }
+
+    .pers-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 

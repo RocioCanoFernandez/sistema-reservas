@@ -275,13 +275,24 @@ section {
     z-index: 10;
 }
 
-/* El Problema (Premium Layout) */
+/* El Problema (Premium Layout - Juggling Bg) */
 .pain-section {
-    background-color: var(--text-main);
+    background-image: url('img/custom-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-color: var(--white);
     padding: 80px 0;
-    margin-top: -60px; /* Sube la sección para solapar sutilmente y reducir el espacio blanco */
+    margin-top: -60px; /* Sube la sección para solapar sutilmente */
     position: relative;
     z-index: 2;
+}
+
+.pain-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.85); /* Veladura blanca para leer textos */
+    z-index: -1;
 }
 
 .pain-grid {
@@ -298,19 +309,6 @@ section {
     }
 }
 
-.pain-header h2 {
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    color: var(--white);
-    letter-spacing: -0.02em;
-}
-
-.text-white-muted {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
 .pain-content {
     display: flex;
     flex-direction: column;
@@ -320,17 +318,21 @@ section {
 .pain-item {
     display: flex;
     gap: 24px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 30px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 }
 
 .pain-item:hover {
     transform: translateX(10px);
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 30px rgba(211,21,54,0.1);
 }
 
 .pain-number {
@@ -342,12 +344,12 @@ section {
 
 .pain-item h3 {
     font-size: 1.3rem;
-    color: var(--white);
+    color: var(--text-dark);
     margin-bottom: 8px;
 }
 
 .pain-item p {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-muted);
     font-size: 0.95rem;
     margin: 0;
     line-height: 1.5;

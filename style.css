@@ -857,6 +857,18 @@ section {
 }
 
 @media (max-width: 768px) {
+    section {
+        padding: 50px 0;
+    }
+    
+    .hero {
+        padding: 60px 0 40px;
+    }
+
+    .feature-row {
+        margin-bottom: 50px;
+    }
+
     .nav {
         display: none;
     }

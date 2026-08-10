@@ -862,7 +862,11 @@ section {
     }
     
     .hero {
-        padding: 60px 0 40px;
+        padding: 60px 0 80px;
+    }
+
+    .pain-section {
+        margin-top: -20px;
     }
 
     .feature-row {

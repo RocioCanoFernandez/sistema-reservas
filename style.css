@@ -733,6 +733,8 @@ section {
     align-items: baseline;
     justify-content: center;
     gap: 12px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .old-price {
@@ -752,6 +754,7 @@ section {
     font-size: 1.2rem;
     color: var(--text-muted);
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .limit {

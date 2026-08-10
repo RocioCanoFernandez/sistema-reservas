@@ -476,6 +476,13 @@ section {
     align-items: center;
 }
 
+@media (max-width: 900px) {
+    .personalizacion-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
 .personalizacion-text h2 {
     margin-bottom: 1rem;
 }
@@ -715,10 +722,17 @@ section {
 
 .price {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.current-price-group {
+    display: flex;
     align-items: baseline;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 10px;
 }
 
 .old-price {
